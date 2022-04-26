@@ -22,3 +22,4 @@ def git_push():
 if m_repo.is_dirty(untracked_files=True):
     print('Foram encontradas alterações')
     git_push()
+    print('O repositório foi atualizado com Sucesso!')
