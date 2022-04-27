@@ -3,7 +3,7 @@ from git import Repo
 
 paths = getcwd()
 m_repo = Repo(paths)
-commit_message = 'Comentário Automático'
+commit_message = input('Insira o Commit:')
 
 for remote in m_repo.remotes:
     print(f'- {remote.name} {remote.url}')
