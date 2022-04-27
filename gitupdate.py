@@ -2,8 +2,8 @@ from os import getcwd
 from git import Repo
 
 paths = getcwd()
-local_path = r'C:\Users\Administrador\AppData\Local\Programs\Python\Python39\Projetos\Streamlit'
-m_repo = Repo(local_path)
+#local_path = r'C:\Users\Administrador\AppData\Local\Programs\Python\Python39\Projetos\Streamlit'
+m_repo = Repo(paths)
 commit_message = 'Comentário Automático'
 
 for remote in m_repo.remotes:
