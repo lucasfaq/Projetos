@@ -3,7 +3,6 @@ from git import Repo
 
 paths = getcwd()
 m_repo = Repo(paths)
-commit_message = input('Insira o Commit:')
 
 for remote in m_repo.remotes:
     print(f'- {remote.name} {remote.url}')
@@ -20,6 +19,7 @@ def git_push():
 
 if m_repo.is_dirty(untracked_files=True):
     print('Foram encontradas alterações')
+    commit_message = input('Insira o Commit:')
     git_push()
     print('O repositório foi atualizado com Sucesso!')
 else:
