@@ -4,9 +4,6 @@ from git import Repo, GitCommandError
 paths = getcwd()
 m_repo = Repo(paths)
 
-#for remote in m_repo.remotes:
-    #print(f'- {remote.name} {remote.url}')
-
 def git_push():
     try:
         m_repo.git.add(A=True)
