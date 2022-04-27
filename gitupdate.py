@@ -1,5 +1,5 @@
 from os import getcwd
-from git import Repo
+from git import Repo, GitCommandError
 
 paths = getcwd()
 m_repo = Repo(paths)
@@ -14,7 +14,7 @@ def git_push():
         m_repo.index.commit(commit_message)
         origin = m_repo.remote(name='origin')
         origin.push()
-    except git.exc.GitCommandError as error:
+    except GitCommandError as error:
         print(f'Aconteceu um Erro {error}')
 
 if m_repo.is_dirty(untracked_files=True):
